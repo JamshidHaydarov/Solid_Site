@@ -1,0 +1,144 @@
+<h1 class="header">Toriq Kids</h1>
+<nav>
+    <ul class="navbar">
+        <li> <a class="navbar" href="#header">home</a></li>
+        <li> <a class="navbar" href="#products">shop</a></li>
+        <li> <a class="navbar" href="#why">why us</a></li>
+        <li> <a class="navbar" href="#contact">contact us</a></li>
+
+        <li> <a class="navbar" href=""><i class="fas fa-user"></i>login</a></li>
+        <li> <a class="navbar" href=""><i class="fas fa-user"></i></a></li>
+        <li> <a class="navbar" href=""><i class="fas fa-user"></i></a></li>
+
+
+    </ul>
+</nav>
+<div class="big-box">
+    <div class="news1">
+        <div class="news">
+            <div class="welcome">
+                <h1 class="welcome">Welcome to Toriq Kids</h1>
+                <p class="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorum explicabo
+                    quis aspernatur at saepe perferendis sed laborum. Vitae non eaque neque porro sunt quisquam
+                    quibusdam dolore tempore perspiciatis amet?</p>
+            </div>
+            <div class="img">
+                <img src="assets/images/shopping-boy.png" width="500px" alt="">
+                <div class="circle"></div>
+                <img class="package first" src="assets/images/shopping-package.png" alt="">
+                <img class="package second" src="assets/images/shopping-package-2.png" alt="">
+                <img class="package third" src="assets/images/shopping-package-3.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
+    <h1 class="product" id="products">OUR PRODUCTS</h1>
+
+
+    <div class="second-div">
+        @for (item of service.products; track $index) {
+        <div class="grid-product" (click)="router_checker(item.id)">
+            <img class="product" src="assets/images/clothes-1.png" alt="" height="300px" width="300px">
+            <div class="product-details">
+                <h1>{{item.name}}</h1>
+                <p class="product-price"> {{item.price}} UZS</p>
+            </div>
+            <div class="second-product-details">
+                <p class="second-product-details"> {{item.description}}</p>
+                <a class="second-product-details" href="">BUY</a>
+            </div>
+        </div>
+
+        }
+
+    </div>
+
+</div>
+<h1 class="why" id="why">WHY SHOP WITH US</h1>
+<div class="third-div">
+    <div class="why-box">
+        <div id="why-icon"></div>
+        <div class="why-details">
+            <h1 why-details>Delivery</h1>
+            <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+
+        </div>
+    </div>
+    <div class="why-box">
+        <div id="why-icon"></div>
+        <div class="why-details">
+            <h1 why-details>Best Quality</h1>
+            <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+
+        </div>
+    </div>
+    <div class="why-box">
+        <div id="why-icon"></div>
+        <div class="why-details">
+            <h1 why-details>Reliability</h1>
+            <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+
+        </div>
+
+    </div>
+
+
+</div>
+<h1 class="contact" id="contact">CONTACT US</h1>
+<div class="fouth-box">
+    <div class="right"></div>
+
+    <div class="contact-us-details">
+        <h1 class="contact-us-details">Contact Us!</h1>
+        <p class="contact-us-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto cupiditate
+            doloribus vero, explicabo animi adipisci libero expedita rerum vitae, aspernatur quaerat, quidem
+            fuga? Adipisci praesentium dolorem non et, laboriosam ut!</p>
+
+    </div>
+
+    <div class="contact-us-elements">
+
+        <form action="">
+
+            <input class="inputs" type="text" placeholder="NAME">
+            <input class="inputs" type="email" placeholder="E-MAIL">
+            <input class="inputs" type="tel" placeholder="NUMBER">
+            <textarea name="" id="" cols="107" rows="10" placeholder="TEXT"></textarea>
+            <input id="send" type="submit" name="" id="" value="SEND">
+        </form>
+
+
+    </div>
+
+
+</div>
+
+<div class="last-div">
+    <div class="last-box">
+        <div class="last-boxx">
+            <h1>ABOUT US</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus a voluptates dolorem
+                rem totam aspernatur perspiciatis inventore soluta, quo maiores consequuntur, repudiandae ad
+                sapiente tempore? Corrupti, similique dolorum? Fugit.</p>
+        </div>
+        <div class="last-boxx">
+            <h1>WHY US</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A laborum quasi placeat porro quaerat
+                expedita nulla dolores id, voluptas minima, saepe atque accusantium magni unde suscipit repellat
+                praesentium, animi tempora.</p>
+        </div>
+        <div class="last-boxx">
+            <h1>CONTACT US</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum atque ipsa quia
+                mollitia eveniet voluptatibus non ab aliquid? Officiis vero quod iusto optio pariatur atque rem
+                maiores, odio ducimus?</p>
+        </div>
+    </div>
+    <hr>
+    <footer>&copy; TORIQ KIDS Ltd. By <a class="jamshid" href="">Jamshid Khaydarov</a></footer>
+
+</div>
