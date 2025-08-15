@@ -16,5 +16,6 @@ export class HaridorComponent {
   ProductId = 0
   router_checker(id: number) {
     this.router.navigate(['/haridor', id]);
+
   }
 }

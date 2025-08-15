@@ -1,3 +1,10 @@
+@if (service.showAlert) {
+<div class="custom-alert">
+    {{ service.alertMessage }}
+    <button (click)="service.closeAlert()">✖</button>
+</div>
+
+}
 <h1 class="header">Toriq Kids</h1>
 <nav>
     <ul class="navbar">
@@ -6,9 +13,8 @@
         <li> <a class="navbar" href="#why">why us</a></li>
         <li> <a class="navbar" href="#contact">contact us</a></li>
 
-        <li> <a class="navbar" href=""><i class="fas fa-user"></i>login</a></li>
-        <li> <a class="navbar" href=""><i class="fas fa-user"></i></a></li>
-        <li> <a class="navbar" href=""><i class="fas fa-user"></i></a></li>
+        <li> <a class="navbar" href=""><i class="fa-solid fa-circle-user"></i>login</a></li>
+        <li routerLink="/mycart"> <a class="navbar"><i class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
 
 
     </ul>
@@ -39,7 +45,11 @@
     <div class="second-div">
         @for (item of service.products; track $index) {
         <div class="grid-product" (click)="router_checker(item.id)">
-            <img class="product" src="assets/images/clothes-1.png" alt="" height="300px" width="300px">
+            <div class="img-conteiner">
+                <img class="product" src="assets/images/clothes-1.png" alt="" height="300px" width="300px">
+
+
+            </div>
             <div class="product-details">
                 <h1>{{item.name}}</h1>
                 <p class="product-price"> {{item.price}} UZS</p>
@@ -142,3 +152,4 @@
     <footer>&copy; TORIQ KIDS Ltd. By <a class="jamshid" href="">Jamshid Khaydarov</a></footer>
 
 </div>
+<router-outlet></router-outlet>

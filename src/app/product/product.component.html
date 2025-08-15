@@ -1,5 +1,6 @@
 <div class="product-page">
 
+
     <div class="product-container">
         <div class="product-image">
             <img src="assets/images/clothes-1.png" alt="Product image">
@@ -14,8 +15,8 @@
             </p>
 
             <div class="product-options">
-                <label for="size">Размер:</label>
-                <select id="size">
+                <label for="size">Hajmi:</label>
+                <select id="size" #select>
                     @for (item of detaileditem?.sizes; track $index) {
                     <option>{{item}}</option>
                     }
@@ -23,11 +24,11 @@
             </div>
 
             <div class="quantity">
-                <label for="qty">Количество:</label>
-                <input type="number" id="qty" value="1" min="1">
+                <label for="qty">Soni:</label>
+                <input type="number" id="qty" value="1" #count min="1">
             </div>
 
-            <button class="add-to-cart">Добавить в корзину</button>
+            <button class="add-to-cart" (click)="add_to_cart(count.value, select.value)">Savatchaga qo'shish</button>
         </div>
     </div>
 

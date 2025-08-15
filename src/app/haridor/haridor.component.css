@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+
 :host {
     display: flex;
     justify-content: center;
@@ -45,14 +46,15 @@ nav {
 ul {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
 li {
     list-style: none;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
     transition: .4s;
+    padding: 0 1rem;
 }
 
 li:hover {
@@ -66,9 +68,12 @@ a.navbar {
     display: flex;
     text-decoration: none;
     display: flex;
-    gap: 2rem;
     text-transform: uppercase;
     color: black;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+
 }
 
 
@@ -194,6 +199,12 @@ div.second-div {
     transition: .5s;
 }
 
+.img-conteiner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
 .grid-product:hover {
     transform: translateY(-20px);
     box-shadow: 0 0 30px rgba(188, 143, 143, 0.342);
@@ -233,8 +244,15 @@ p.second-product-details {
 }
 
 img.product {
-    object-fit: cover;
+    width: 100%;
+    transition: .5s;
 }
+
+img.product:hover {
+    scale: 1.1;
+}
+
+
 
 h1.product,
 h1.contact {
@@ -427,4 +445,40 @@ a.jamshid {
 
 hr {
     margin: 1rem 0;
+}
+
+.custom-alert {
+    background-color: #e6ffed;
+    color: #216e39;
+    padding: 15px 20px;
+    border-left: 5px solid #2ecc71;
+    border-radius: 4px;
+    margin-top: 20px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    gap: 1rem;
+}
+
+.custom-alert button {
+    position: absolute;
+    top: 1rem;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: #0f5132;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
