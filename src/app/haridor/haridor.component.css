@@ -425,18 +425,9 @@ footer {
     margin-top: 5rem;
 }
 
-div.liniya {
-    display: flex;
-    justify-content: center;
-}
 
-h1.liniya {
-    margin-top: 2rem;
-    height: 2rem;
-    width: 50vw;
-    border-top: 1px solid white;
-    text-align: center;
-}
+
+
 
 a.jamshid {
     color: white;

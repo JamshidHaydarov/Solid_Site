@@ -1,0 +1,59 @@
+<div class="main">
+    <h3>Savatingiz,<span> {{serv.cart_array().length}} ta mahsulot </span> </h3>
+    <div class="block">
+        <div class="box">
+            <div class="block-header">
+                <div class="left-header-details">
+                    <input type="checkbox" name="" id="">
+                    <p>Hammasini tanlash</p>
+                </div>
+                <div class="right-header-details">Umumiy: {{serv.total_cart_price}} UZS</div>
+            </div>
+            <div class="items">
+                @for (item of serv.cart_array(); track $index) {
+                <hr>
+
+                <div class="item">
+                    <div class="item-img">
+                        <input type="checkbox" name="" id="">
+                        <img src="assets/images/clothes-1.png" alt="">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-name">{{item.name}}</h3>
+                        <p class="item-description">{{item.description}}</p>
+                    </div>
+                    <h3 class="item-size"><span class="item-size-span">O'lcham: </span>{{item.size}}</h3>
+                    <h3><span class="item-count-span">Soni:</span> {{item.count}}</h3>
+                    <h2 class="item-price">{{item.price}} UZS</h2>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="last-div">
+        <div class="last-box">
+            <div class="last-boxx">
+                <h1>ABOUT US</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus a voluptates dolorem
+                    rem totam aspernatur perspiciatis inventore soluta, quo maiores consequuntur, repudiandae ad
+                    sapiente tempore? Corrupti, similique dolorum? Fugit.</p>
+            </div>
+            <div class="last-boxx">
+                <h1>WHY US</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A laborum quasi placeat porro quaerat
+                    expedita nulla dolores id, voluptas minima, saepe atque accusantium magni unde suscipit repellat
+                    praesentium, animi tempora.</p>
+            </div>
+            <div class="last-boxx">
+                <h1>CONTACT US</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum atque ipsa quia
+                    mollitia eveniet voluptatibus non ab aliquid? Officiis vero quod iusto optio pariatur atque rem
+                    maiores, odio ducimus?</p>
+            </div>
+        </div>
+        <hr>
+        <footer>&copy; TORIQ KIDS Ltd. By <a class="jamshid" href="">Jamshid Khaydarov</a></footer>
+
+    </div>
+</div>

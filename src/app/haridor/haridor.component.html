@@ -1,7 +1,7 @@
 @if (service.showAlert) {
 <div class="custom-alert">
     {{ service.alertMessage }}
-    <button (click)="service.closeAlert()">✖</button>
+    <button (click)="service.closeAlert()"></button>
 </div>
 
 }
@@ -14,7 +14,8 @@
         <li> <a class="navbar" href="#contact">contact us</a></li>
 
         <li> <a class="navbar" href=""><i class="fa-solid fa-circle-user"></i>login</a></li>
-        <li routerLink="/mycart"> <a class="navbar"><i class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
+        <li routerLink="/mycart" (click)="service.total_cart_price_func()"> <a class="navbar"><i
+                    class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
 
 
     </ul>
@@ -29,11 +30,11 @@
                     quibusdam dolore tempore perspiciatis amet?</p>
             </div>
             <div class="img">
-                <img src="assets/images/shopping-boy.png" width="500px" alt="">
+                <img loading="lazy" src="assets/images/shopping-boy.png" width="500px" alt="">
                 <div class="circle"></div>
-                <img class="package first" src="assets/images/shopping-package.png" alt="">
-                <img class="package second" src="assets/images/shopping-package-2.png" alt="">
-                <img class="package third" src="assets/images/shopping-package-3.png" alt="">
+                <img loading="lazy" class="package first" src="assets/images/shopping-package.png" alt="">
+                <img loading="lazy" class="package second" src="assets/images/shopping-package-2.png" alt="">
+                <img loading="lazy" class="package third" src="assets/images/shopping-package-3.png" alt="">
 
             </div>
         </div>
@@ -46,7 +47,8 @@
         @for (item of service.products; track $index) {
         <div class="grid-product" (click)="router_checker(item.id)">
             <div class="img-conteiner">
-                <img class="product" src="assets/images/clothes-1.png" alt="" height="300px" width="300px">
+                <img loading="lazy" class="product" src="assets/images/clothes-1.png" alt="" height="300px"
+                    width="300px">
 
 
             </div>
@@ -55,7 +57,7 @@
                 <p class="product-price"> {{item.price}} UZS</p>
             </div>
             <div class="second-product-details">
-                <p class="second-product-details"> {{item.description}}</p>
+                <p class="second-product-details"> {{item.description | trimmer}} </p>
                 <a class="second-product-details" href="">BUY</a>
             </div>
         </div>
