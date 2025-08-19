@@ -1,33 +1,76 @@
-<div class="main">
-    <h3>Savatingiz,<span> {{serv.cart_array().length}} ta mahsulot </span> </h3>
-    <div class="block">
-        <div class="box">
-            <div class="block-header">
-                <div class="left-header-details">
-                    <input type="checkbox" name="" id="">
-                    <p>Hammasini tanlash</p>
-                </div>
-                <div class="right-header-details">Umumiy: {{serv.total_cart_price}} UZS</div>
-            </div>
-            <div class="items">
-                @for (item of serv.cart_array(); track $index) {
-                <hr>
+<h1 class="header">Toriq Kids</h1>
+<nav>
+    <ul class="navbar">
+        <li> <a class="navbar" href="#header">home</a></li>
+        <li> <a class="navbar" href="#products">shop</a></li>
+        <li> <a class="navbar" href="#why">why us</a></li>
+        <li> <a class="navbar" href="#contact">contact us</a></li>
 
-                <div class="item">
-                    <div class="item-img">
-                        <input type="checkbox" name="" id="">
-                        <img src="assets/images/clothes-1.png" alt="">
+        <li> <a class="navbar" href=""><i class="fa-solid fa-circle-user"></i>login</a></li>
+        <li routerLink="/mycart" (click)="serv.total_cart_price_func()"> <a class="navbar"><i
+                    class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
+
+
+    </ul>
+</nav>
+
+
+
+<div class="main">
+    <h3 class="cart-information">Savatingiz,<span> {{serv.cart_array().length}} ta mahsulot </span> </h3>
+
+    <div class="order-details">
+        <div class="block">
+            <div class="box">
+                <div class="block-header">
+                    <div class="left-header-details">
+                        <input type="checkbox" name="" id="" (click)="checking_all()" [(ngModel)]="all_check">
+                        <p>Hammasini tanlash</p>
                     </div>
-                    <div class="item-details">
-                        <h3 class="item-name">{{item.name}}</h3>
-                        <p class="item-description">{{item.description}}</p>
-                    </div>
-                    <h3 class="item-size"><span class="item-size-span">O'lcham: </span>{{item.size}}</h3>
-                    <h3><span class="item-count-span">Soni:</span> {{item.count}}</h3>
-                    <h2 class="item-price">{{item.price}} UZS</h2>
+                    <div class="right-header-details" (click)="delete_items()"><i class="fa-solid fa-trash-can" ></i> Yo'q qilish</div>
                 </div>
-                }
+                <div class="items">
+                    @for (item of serv.cart_array(); track $index) {
+                    <hr>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <input type="checkbox" name="" id="" (click)="checking(item.id)" [(ngModel)]="item.is_checked">
+                            <img src="{{item.photo}}" alt="">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">{{item.name}}</h3>
+                            <p class="item-description">{{item.description | trimmer}}</p>
+                        </div>
+                        <h3 class="item-size"><span class="item-size-span">O'lcham: </span>{{item.size}}</h3>
+                        <h3><span class="item-count-span">Soni:</span> {{item.count}}</h3>
+                        <h2 class="item-price"><span class="span-item-price">{{item.price}}</span> UZS</h2>
+                    </div>
+                    }
+                </div>
             </div>
+        </div>
+        <div class="order-conteiner">
+            <h2 class="order-header">Buyurtmangiz:</h2>
+            <br>
+            <div class="products-count-and-price">
+                <p class="products-count">Mahsulotlar ({{serv.cart_array().length}}):</p>
+                <p class="products-price">{{serv.total_cart_price}} UZS</p>
+            </div>
+            <br>
+            <p class="delivery-date">Yetkazib berish: {{today | date}}</p>
+            <br>
+            <h2 class="pay-header">To'lov turlari: </h2>
+            <div class="payment-methods">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-amex"></i>
+            </div>
+
+
+            <button class="order-btn">Rasmiylashtirish</button>
+
         </div>
     </div>
 

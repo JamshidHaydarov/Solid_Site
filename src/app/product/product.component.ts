@@ -1,12 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServService, Product } from '../serv.service';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
@@ -35,7 +34,9 @@ export class ProductComponent implements OnInit {
       description: item.description,
       price: item.price,
       size: size,
-      count: count
+      count: count,
+      photo: item.photo,
+      is_checked: false,
     }
     this.serv.cart_array.update(data => [...data, realitem])
     this.serv.showCustomAlert();

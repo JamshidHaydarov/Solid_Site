@@ -30,11 +30,11 @@
                     quibusdam dolore tempore perspiciatis amet?</p>
             </div>
             <div class="img">
-                <img loading="lazy" src="assets/images/shopping-boy.png" width="500px" alt="">
+                <img  src="assets/images/shopping-boy.png" width="500px" alt="" loading="lazy">
                 <div class="circle"></div>
-                <img loading="lazy" class="package first" src="assets/images/shopping-package.png" alt="">
-                <img loading="lazy" class="package second" src="assets/images/shopping-package-2.png" alt="">
-                <img loading="lazy" class="package third" src="assets/images/shopping-package-3.png" alt="">
+                <img class="package first" src="assets/images/shopping-package.png" alt="" loading="lazy">
+                <img class="package second" src="assets/images/shopping-package-2.png" alt="" loading="lazy">
+                <img class="package third" src="assets/images/shopping-package-3.png" alt="" loading="lazy">
 
             </div>
         </div>
@@ -45,20 +45,21 @@
 
     <div class="second-div">
         @for (item of service.products; track $index) {
-        <div class="grid-product" (click)="router_checker(item.id)">
+        <div class="grid-product" >
             <div class="img-conteiner">
-                <img loading="lazy" class="product" src="assets/images/clothes-1.png" alt="" height="300px"
-                    width="300px">
+                <img  class="product" src="{{item.photo}}" alt="" height="300px"
+                    width="300px" loading="lazy">
 
 
             </div>
             <div class="product-details">
                 <h1>{{item.name}}</h1>
-                <p class="product-price"> {{item.price}} UZS</p>
+                <p class="product-price"> {{item.price * 1.3}} UZS</p>
+                <p class="sale-product-price">{{item.price}} UZS</p>
             </div>
             <div class="second-product-details">
                 <p class="second-product-details"> {{item.description | trimmer}} </p>
-                <a class="second-product-details" href="">BUY</a>
+                <a class="second-product-details" (click)="router_checker(item.id)">BUY</a>
             </div>
         </div>
 
@@ -70,29 +71,29 @@
 <h1 class="why" id="why">WHY SHOP WITH US</h1>
 <div class="third-div">
     <div class="why-box">
-        <div id="why-icon"></div>
+        <div id="why-icon"><i class="fa-solid fa-truck why-us-icons"></i></div>
         <div class="why-details">
             <h1 why-details>Delivery</h1>
             <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
-                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod .</p>
 
         </div>
     </div>
     <div class="why-box">
-        <div id="why-icon"></div>
+        <div id="why-icon"><i class="fa-solid fa-ranking-star why-us-icons"></i></div>
         <div class="why-details">
             <h1 why-details>Best Quality</h1>
             <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
-                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod .</p>
 
         </div>
     </div>
     <div class="why-box">
-        <div id="why-icon"></div>
+        <div id="why-icon"><i class="fa-solid fa-award why-us-icons"></i></div>
         <div class="why-details">
             <h1 why-details>Reliability</h1>
             <p why-details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit quis
-                quibusdam porro, non corrupti eaque dolor nihil architecto quod consequuntur.</p>
+                quibusdam porro, non corrupti eaque dolor nihil architecto quod .</p>
 
         </div>
 
@@ -134,7 +135,7 @@
         <div class="last-boxx">
             <h1>ABOUT US</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus a voluptates dolorem
-                rem totam aspernatur perspiciatis inventore soluta, quo maiores consequuntur, repudiandae ad
+                rem totam aspernatur perspiciatis inventore soluta, quo maiores , repudiandae ad
                 sapiente tempore? Corrupti, similique dolorum? Fugit.</p>
         </div>
         <div class="last-boxx">

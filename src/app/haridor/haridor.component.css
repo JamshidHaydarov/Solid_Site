@@ -50,6 +50,7 @@ ul {
 }
 
 li {
+    cursor: pointer;
     list-style: none;
     display: flex;
     align-items: center;
@@ -84,6 +85,7 @@ div.welcome {
     padding-left: 2rem;
 }
 
+
 div.news1 {
     width: 90%;
     height: 78.6vh;
@@ -92,6 +94,11 @@ div.news1 {
     color: white;
 
 
+}
+
+.why-us-icons {
+    font-size: 4rem;
+    margin-top: 20px;
 }
 
 div.news {
@@ -108,6 +115,7 @@ div.news {
 
 p.welcome {
     margin-top: 1rem;
+    width: 95%;
 }
 
 div.img {
@@ -163,9 +171,9 @@ div.img {
 
 
 div.second-div {
-    gap: 5rem;
+    gap: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     height: fit-content;
     width: 90%;
     grid-auto-rows: 400px;
@@ -178,7 +186,19 @@ div.second-div {
 
 .product-price {
     color: red;
+    font-weight: 700;
+    position: absolute;
+    right: 7px;
+    top: 310px;
+    text-decoration:line-through;
+}
+.sale-product-price {
+    color: #28a745;
     font-weight: 1000;
+    transform: scale(1.4);
+    position: absolute;
+    right: 1.4rem;
+    top: 325px;
 }
 
 .product-details {
@@ -197,6 +217,8 @@ div.second-div {
     padding: 10px 1rem;
     height: fit-content;
     transition: .5s;
+    width: 280px;
+    position: relative;
 }
 
 .img-conteiner {
@@ -227,6 +249,7 @@ a.second-product-details {
     width: 15%;
     text-align: center;
     transition: .3s;
+    cursor: pointer;
 }
 
 a.second-product-details:hover {
@@ -274,6 +297,9 @@ div.third-div {
 
 #why-icon {
     height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.why-details {

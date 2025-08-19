@@ -6,6 +6,7 @@ export interface Product {
   price: number;
   description: string;
   sizes: string[];
+  photo: string;
 
 }
 
@@ -15,8 +16,10 @@ export interface CartItem {
   name: string;
   price: number;
   description: string;
-  count?: number,
-  size?: string
+  count: number,
+  size: string
+  photo: string;
+  is_checked: boolean;
 }
 @Injectable({
   providedIn: 'root'
@@ -26,13 +29,87 @@ export class ServService {
 
   cart_array = signal<CartItem[]>([
     {
-      id: 1,
+      id: 0,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
       count: 2,
-      size: "L"
-    }
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },
+    {
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },{
+      id: 0,
+      name: "Ko'ylak Turkiya",
+      price: 175000,
+      description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
+      count: 2,
+      size: "L",
+      photo: "assets/images/clothes-1.png",
+      is_checked: false,
+
+    },
   ])
 
   products: Product[] = [
@@ -42,6 +119,8 @@ export class ServService {
       price: 250000,
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. dsadsa dsadsa dsa dsads adsa dasdas dsad as',
       sizes: ["S", "M", "L", "XL", "XXL"],
+      photo: "assets/images/clothes-1.png"
+
     },
     {
       id: 2,
@@ -49,18 +128,24 @@ export class ServService {
       price: 175000,
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
       sizes: ["S", "M", "L", "XL", "XXL"],
+      photo: "assets/images/clothes-1.png"
+
     }, {
       id: 3,
       name: "Ko'ylak",
       price: 150000,
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
       sizes: ["S", "M", "L", "XL", "XXL"],
+      photo: "assets/images/clothes-1.png"
+
     }, {
       id: 4,
       name: "Ko'ylak",
       price: 225000,
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
       sizes: ["S", "M", "L", "XL", "XXL"],
+      photo: "assets/images/clothes-1.png"
+
     },
   ]
   alertMessage = "Savatchaga qo'shildi✅ "
@@ -73,8 +158,8 @@ export class ServService {
     this.showAlert = false;
   }
   total_cart_price_func() {
+    this.total_cart_price = 0
     this.cart_array().map(data => this.total_cart_price += data.price * data.count!)
-    console.log(this.total_cart_price);
 
   }
 

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ServService } from '../serv.service';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { TrimmerPipe } from '../trimmer.pipe';
+import { CurrencyPipe } from '@angular/common';
 
 
 @Component({
@@ -19,5 +20,4 @@ export class HaridorComponent {
     this.router.navigate(['/haridor', id]);
 
   }
-  trimmerP = inject(TrimmerPipe)
 }
