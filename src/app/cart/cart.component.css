@@ -21,7 +21,7 @@ span {
 }
 
 .block {
-    height: 53vh;
+    height: fit-content;
 }
 
 .box {
@@ -29,9 +29,7 @@ span {
     border: 1px solid rgba(73, 93, 95, 0.361);
     border-radius: 8px;
     max-height: 100%;
-    overflow: auto;
-    ::-webkit-scrollbar { display: none; };
-    scrollbar-width: none;
+
 }
 
 hr {
@@ -50,6 +48,7 @@ hr {
     top: 0;
     background-color: #fff;
     height: 40px;
+    background-color: transparent;
 }
 
 div.left-header-details {
@@ -213,7 +212,9 @@ a.navbar {
     border: 1px solid rgba(73, 93, 95, 0.361);
     border-radius: 8px;
     padding: 5px;
-    position: relative;
+    position: sticky;
+    top: 10%;
+    height: 48vh;
 }
 
 .order-btn {
@@ -228,6 +229,13 @@ a.navbar {
     font-weight: 550;
     letter-spacing: 1px;
     transition: .3s;
+}
+
+.order-btn:disabled {
+    background-color: rgba(128, 128, 128, 0.519);
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .delivery-date {

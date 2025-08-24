@@ -29,7 +29,7 @@ export class ServService {
 
   cart_array = signal<CartItem[]>([
     {
-      id: 0,
+      id: 100,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -40,7 +40,7 @@ export class ServService {
 
     },
     {
-      id: 0,
+      id: 101,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -50,7 +50,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 102,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -60,7 +60,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 103,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -70,7 +70,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 104,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -80,7 +80,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 105,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -90,7 +90,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 106,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
@@ -100,7 +100,7 @@ export class ServService {
       is_checked: false,
 
     },{
-      id: 0,
+      id: 107,
       name: "Ko'ylak Turkiya",
       price: 175000,
       description: "Lorem ipsvum sdnaidbsadbnsahdnsadnj",
