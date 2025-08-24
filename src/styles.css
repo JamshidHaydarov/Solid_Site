@@ -8,3 +8,26 @@ body {
     display: flex;
     justify-content: center;
 }
+
+
+h1.header {
+    font-family: 'Baloo 2' !important;
+    color: rgb(64, 224, 208);
+}
+
+li {
+    font-family: 'Quicksand' !important;
+}
+
+h1.welcome {
+    font-family: 'Fredoka' !important;
+}
+
+p.welcome {
+    font-family: "Poppins" !important;
+    font-size: 1.7rem;
+}
+
+h1.chapter {
+    font-family: "Quicksand" !important;
+}
