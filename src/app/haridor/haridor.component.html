@@ -5,15 +5,69 @@
 </div>
 
 }
+
+
+@if (isLoginPage) {
+<div class="auth-box">
+    <div class="auth-tabs">
+        <button [class.active]="isLogin" (click)="toggleForm(true)">Login</button>
+        <button [class.active]="!isLogin" (click)="toggleForm(false)">Register</button>
+    </div>
+    @if (isLogin) {
+    <form (submit)="onLogin($event)" class="auth-form">
+        <div class="input-group">
+            <input type="text" placeholder="" class="inputs" required />
+            <label>Username</label>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="" class="inputs" required />
+            <label>Password</label>
+        </div>
+        <button type="submit" id="auth-btn">Log In</button>
+        <p class="forgot-password">Forgot your password?</p>
+    </form>
+
+    }
+    @if (!isLogin) {
+    <form (submit)="onRegister($event)" class="auth-form">
+        <div class="input-group">
+            <input type="text" placeholder="" class="inputs" required />
+            <label>Username</label>
+        </div>
+        <div class="input-group">
+            <input type="email" placeholder="" class="inputs" required />
+            <label>Email</label>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="" class="inputs" required />
+            <label>Password</label>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="" class="inputs" required />
+            <label>Confirm Password</label>
+        </div>
+        <button type="submit" id="auth-btn">Register</button>
+    </form>
+    }
+
+</div>
+
+
+
+}
+
+
+
 <h1 class="header">Toriq Kids</h1>
 <nav>
     <ul class="navbar">
-        <li> <a class="navbar" href="#header">home</a></li>
-        <li> <a class="navbar" href="#products">shop</a></li>
+        <li> <a class="navbar" routerLink="/haridor">hOME</a></li>
+        <li> <a class="navbar" routerLink="/haridor" fragment="products">shop</a></li>
         <li> <a class="navbar" href="#why">why us</a></li>
         <li> <a class="navbar" href="#contact">contact us</a></li>
 
-        <li> <a class="navbar" href=""><i class="fa-solid fa-circle-user"></i>login</a></li>
+        <li> <a class="navbar login-navbar" (click)="changeLoginPage()"><i class="fa-solid fa-circle-user"></i>login</a>
+        </li>
         <li routerLink="/mycart" (click)="service.total_cart_price_func()"> <a class="navbar"><i
                     class="fa-solid fa-cart-shopping"></i>My Cart</a></li>
 

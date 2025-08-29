@@ -20,4 +20,28 @@ export class HaridorComponent {
     this.router.navigate(['/haridor', id]);
 
   }
+
+  isLogin = true; // по умолчанию форма логина
+  isLoginPage = false;
+  toggleForm(login: boolean) {
+    this.isLogin = login;
+  }
+
+  onLogin(event: Event) {
+    event.preventDefault();
+    // логика логина
+    console.log('Logging in...');
+  }
+
+  onRegister(event: Event) {
+    event.preventDefault();
+    // логика регистрации
+    console.log('Registering...');
+  }
+
+  changeLoginPage() {
+    this.isLoginPage = !this.isLoginPage
+  }
+
+
 }
